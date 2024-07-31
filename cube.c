@@ -1,4 +1,7 @@
+#include <stdio.h>
 #include <math.h>
+#include <string.h>
+#include <unistd.h>
 
 float A, B, C;
 
@@ -7,6 +10,8 @@ int width = 320, height = 88;
 float zBuffer[320][88];
 char buffer[320][88];
 int backgroundASCIICode = ' ';
+int distanceFromCam = 90;
+float incrementSpeed = 0.8;
 
 float calculateX(int i, int j, int k) {
 return j *sin(A) * sin(B) * cos(C) - k* cos(A) * sin(B) * cos(C) +
@@ -24,9 +29,16 @@ return k * cos(A) * cos(B) - j * sin(A) * cos(B) + i * sin(B);
 }
 
 
-int main(){
-    printf("\x1b[2J");
-    while(1){
-    }
-    return 0;
-}
+int main() {
+    printf("\x1b[2]");
+    while (1) {
+    memset(buffer, backgroundASCIICode, width * height);
+    memset(zBuffer, 0, width * height * 4);
+        for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementSpeed) {
+            for (float cubeY = -cubeWidth; cubeY < cubeWidth;
+            cubeY += incrementSpeed) {
+            return 0;
+            }
+        }
+    }    
+}    
