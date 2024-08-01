@@ -52,6 +52,12 @@ A simple C program that displays a rotating 3D cube in the terminal using ASCII 
 
 ## Screenshot
 
+(Space for wiki screenshots of the equations used)
+
 ## Acknowledgements
 
 Inspired by various ASCII art and 3D graphics tutorials.
+
+For more information on rotation matrices, visit the [Wikipedia page](https://en.wikipedia.org/wiki/Rotation_matrix).
+
+Special thanks to the [YouTube video](https://www.youtube.com/watch?v=p09i_hoFdd0) for inspiration and guidance.
