@@ -2,7 +2,7 @@
 
 A simple C program that displays a rotating 3D cube in the terminal using ASCII characters. The program demonstrates basic 3D graphics principles, including rotation and depth buffering.
 
-![cube](https://github.com/user-attachments/assets/ff03b673-590c-4051-972d-2b5c17b44604)
+![cube2](https://github.com/user-attachments/assets/71a3aa88-8b7b-4baf-a9d9-60074fec6a60)
 
 ## Features
 
