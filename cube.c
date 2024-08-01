@@ -11,13 +11,13 @@ float cubeWidth = 20;
 int width = 160, height = 44;
 float zBuffer[160 * 44];
 char buffer[160 * 44];
-int backgroundASCIICode = '.';
+int backgroundASCIICode = ' ';
 int distanceFromCam = 100;
 float horizontalOffset;
 float K1 = 40;
 
 // Increment speed for the cube rotation
-float incrementSpeed = 0.6;
+float incrementSpeed = 0.6f;
 
 // Variables for calculations
 float x, y, z;
@@ -51,7 +51,7 @@ void calculateForSurface(float cubeX, float cubeY, float cubeZ, int ch) {
 
     ooz = 1 / z;
 
-    xp = (int)(width / 2 + horizontalOffset + K1 * ooz * x * 2);
+    xp = (int)(width / 2 - 2 * cubeWidth + horizontalOffset + K1 * ooz * x * 2);
     yp = (int)(height / 2 + K1 * ooz * y);
 
     idx = xp + yp * width;
@@ -71,10 +71,22 @@ int main() {
         memset(buffer, backgroundASCIICode, width * height);
         memset(zBuffer, 0, width * height * 4);
 
-        // Calculate the surface for each point on the cube
+        // Loop over the range of cubeX from -cubeWidth to cubeWidth with steps of incrementSpeed
         for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementSpeed) {
+            // Loop over the range of cubeY from -cubeWidth to cubeWidth with steps of incrementSpeed
             for (float cubeY = -cubeWidth; cubeY < cubeWidth; cubeY += incrementSpeed) {
-                calculateForSurface(cubeX, cubeY, -cubeWidth, '$');
+                //  front surface of the cube
+                calculateForSurface(cubeX, cubeY, -cubeWidth, '.');
+                //  right surface of the cube
+                calculateForSurface(cubeWidth, cubeY, cubeX, '$');
+                //  left surface of the cube
+                calculateForSurface(-cubeWidth, cubeY, -cubeX, '~');
+                //  back surface of the cube
+                calculateForSurface(-cubeX, cubeY, cubeWidth, '#');
+                //  bottom surface of the cube
+                calculateForSurface(cubeX, -cubeWidth, -cubeY, ';');
+                //  top surface of the cube
+                calculateForSurface(cubeX, cubeWidth, cubeY, '+');
             }
         }
 
