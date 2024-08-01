@@ -52,10 +52,6 @@ A simple C program that displays a rotating 3D cube in the terminal using ASCII 
 
 ## Screenshot
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
-
 ## Acknowledgements
 
 Inspired by various ASCII art and 3D graphics tutorials.
