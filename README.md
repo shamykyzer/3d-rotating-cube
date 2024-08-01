@@ -20,11 +20,11 @@ A simple C program that displays a rotating 3D cube in the terminal using ASCII 
     ```
 2. Change into the project directory:
     ```bash
-    cd 3d-rotating-cube
+    cd cube
     ```
 3. Compile the program:
     ```bash
-    gcc main.c -o cube -lm
+    gcc cube.c -lm -o cube
     ```
 4. Run the program:
     ```bash
