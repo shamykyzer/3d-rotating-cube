@@ -33,7 +33,7 @@ A simple C program that displays a rotating 3D cube in the terminal using ASCII 
 
 ## Code Structure
 
-- `main.c`: The main source code file containing the 3D cube rotation logic.
+- `cube.c`: The main source code file containing the 3D cube rotation logic.
 
 ## Explanation of Key Components
 
