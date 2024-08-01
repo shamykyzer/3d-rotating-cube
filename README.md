@@ -54,6 +54,8 @@ A simple C program that displays a rotating 3D cube in the terminal using ASCII 
 
 ## Screenshot
 
+![image](https://github.com/user-attachments/assets/b4751dad-1b22-407b-8f5d-4f2d3617b0eb)
+
 ![image](https://github.com/user-attachments/assets/c7f5188e-4a62-4d4f-a5c0-457678cfb30e)
 
 ## Acknowledgements
